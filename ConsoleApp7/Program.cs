@@ -2,16 +2,10 @@
 int secondNumber;
 
 Console.WriteLine("Enter first number: ");
-while (!int.TryParse(Console.ReadLine(), out firstNumber)) // Added a check to ensure that the user enters only numbers
-{
-    Console.WriteLine("Enter only integers: ");
-}
+firstNumber = int.Parse(Console.ReadLine());
 
 Console.WriteLine("Enter second number: ");
-while (!int.TryParse(Console.ReadLine(), out secondNumber))
-{
-    Console.WriteLine("Enter only integers: ");
-}
+secondNumber = int.Parse(Console.ReadLine());
 
 try
 {
@@ -22,8 +16,8 @@ try
      
     else
     {
-        double result = (double)firstNumber / secondNumber; // Converted the dividend to a double
-        Console.WriteLine($"Result: {result:F3}"); // Displayed the result and showed 3 digits after the dot
+        int result = firstNumber / secondNumber;  
+        Console.WriteLine($"Result: {result}");  
     }
 }
     catch
