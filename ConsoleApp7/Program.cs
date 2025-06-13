@@ -9,20 +9,13 @@ secondNumber = int.Parse(Console.ReadLine());
 
 try
 {
-    if (secondNumber == 0)
-    {
-        Console.WriteLine("You can't divide by 0!");
-    }
-     
-    else
-    {
-        int result = firstNumber / secondNumber;  
-        Console.WriteLine($"Result: {result}");  
-    }
+    int result = firstNumber / secondNumber;
+    Console.WriteLine($"Result: {result}");
 }
     catch
 {
-    Console.WriteLine("Error or exception");
+        if (secondNumber == 0)
+        Console.WriteLine("You can't divide by 0!");
 }
 finally
 {
